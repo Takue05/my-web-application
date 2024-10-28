@@ -32,7 +32,8 @@ services:
       SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
-      - mysql-db
+       mysql-db:
+         condition: service_healthy
     networks:
       - my-network
     command: ["java", "-jar", "web-app-docker.jar"]
