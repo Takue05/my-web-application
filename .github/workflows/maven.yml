@@ -67,6 +67,9 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
         echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - name: Check SSH agent status
+      run: ssh-add -l
+
     - name: Deploy to Production Server
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
