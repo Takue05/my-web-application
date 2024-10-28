@@ -61,8 +61,14 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator-core</artifactId>
 		</dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
 
-	</dependencies>
+
+  </dependencies>
 
 	<build>
 		<plugins>
@@ -79,6 +85,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+    <finalName>web-app-docker</finalName>
 	</build>
 
 </project>

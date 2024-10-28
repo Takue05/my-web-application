@@ -1,7 +1,7 @@
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Model/User.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Controller/MainController.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Service/UserService.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Controller/UserController.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Repository/UserRepository.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/Service/UserNotFoundException.java
-/home/takudzwa/Desktop/MyWebApp/src/main/java/com/mycompany/mywebapp/MyWebAppApplication.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Controller/MainController.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/MyWebAppApplication.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Model/User.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Service/UserService.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Repository/UserRepository.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Service/UserNotFoundException.java
+/home/takudzwa/Documents/PROJECTS/my-web-application/src/main/java/com/mycompany/mywebapp/Controller/UserController.java

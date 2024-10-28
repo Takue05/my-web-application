@@ -2,8 +2,9 @@ package com.mycompany.mywebapp.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.persistence.*;
-import jakarta.persistence.Table;
+
+
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -17,7 +18,7 @@ public class User {
 
     @Column(nullable = false, unique = true, length=45)
     private String email;
-    @Column(length = 15, nullable = false )
+    @Column(length = 45, nullable = false )
     private String password;
 
     @Column(length = 45, nullable = false, name="first_name")
