@@ -55,15 +55,11 @@ jobs:
     needs: docker-build-push
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Start SSH agent
-        run: eval $(ssh-agent -s)
-
-      - name: Add SSH private key
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Start SSH agent and add private key
         run: |
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+    
       - name: Check SSH agent status
         run: ssh-add -l
 
