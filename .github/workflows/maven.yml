@@ -55,14 +55,16 @@ jobs:
     needs: docker-build-push
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Start SSH agent and add private key
-        run: |
-          eval $(ssh-agent -s)
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+    - name: Start SSH agent
+      run: eval $(ssh-agent -s)
     
-      - name: Check SSH agent status
-        run: ssh-add -l
+    - name: Add SSH private key
+      run: |
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+    
+    - name: Check SSH agent status
+      run: ssh-add -l || echo "No identities found."
 
-      - name: Deploy to Production Server
-        run: |
+    - name: Deploy to Production Server
+      run: |
           ssh -o StrictHostKeyChecking=no TakudzwaNhema@20.84.103.115 -p 822 "docker pull takue05/web-app-docker:latest && docker-compose up -d"
