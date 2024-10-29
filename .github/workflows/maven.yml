@@ -51,7 +51,6 @@ jobs:
         run: docker push takue05/web-app-docker:latest
 
   deploy:
-
     runs-on: ubuntu-latest
     steps:
       - name: Set up SSH
