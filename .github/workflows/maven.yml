@@ -2,7 +2,6 @@
 # This workflow builds the project, caches dependencies, builds a Docker image, and optionally deploys to a production server.
 # For more details, see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
-
 name: Web App CI/CD Flow
 
 on:
