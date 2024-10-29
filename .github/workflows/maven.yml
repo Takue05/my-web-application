@@ -70,4 +70,5 @@ jobs:
 
      - name: Deploy to Production Server
        run: |
-          ssh -o StrictHostKeyChecking=no TakudzwaNhema@20.84.103.115 -p 822 "docker pull takue05/web-app-docker:latest && docker-compose up -d"
+         ssh -v -o StrictHostKeyChecking=no TakudzwaNhema@20.84.103.115 -p 822 "docker pull takue05/web-app-docker:latest && docker-compose up -d"
+
